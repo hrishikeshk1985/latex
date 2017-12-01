@@ -1,0 +1,262 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usepackage{graphics}
+\usepackage{graphicx}
+%\usepackage{color}
+\usepackage{latexsym,amsmath,amsfonts,amssymb}
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{thm}[lem]{Theorem}
+\newtheorem{prop}[lem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{exa}[lem]{Example}
+\newtheorem{rem}[lem]{Remark}
+\newtheorem{obs}[lem]{Observation}
+\newtheorem{ct}{Construction}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{ps}{Proposition}
+\newtheorem{cvs}{}
+\newtheorem{defn}{Definition}[section]
+\usepackage{multicol}
+%\newcommand{\vl}{\color {violet}}
+%\newcommand{\bl}{\color {blue}}
+%\newcommand{\rd}{\color {red}}
+%\newcommand{\yl}{\color {yellow}}
+%\setbeamercolor{normal text}{bg=gray!40}
+%\setbeamercolor{background canvas}{bg=violet!30}
+\begin{document}
+\baselineskip 12truept
+\title{Python Data Structures}
+%\subtitle{Research Proposal Presentation}
+%\author{Dr. Vinayak Joshi\email{vvj@}}
+\author[Hrishikesh Khaladkar,Fergusson College, Pune]{by\\Hrishikesh Khaladkar\\Department of Mathematics \\ Fergusson College, Pune}
+%\institute{Department of Mathematics\\University of Pune\\Pune-411 007}\\
+\vspace{0.5cm} 
+%\date{$15^{th}$ Sept $2014$}
+\frame{\titlepage}
+%\section[Outline]{}
+%\frame{\tableofcontents}
+\section{Python Data Structures}
+%\subsection{Prime ideals in Lattices}
+\begin{frame}
+      \frametitle{Strings}
+      Note : Strings are immutable in Python
+			\begin{itemize}
+			\item  mystring = "Hello Python3.6" \\
+                   print(mystring) \\
+                   You are also allowed to put multiple Quotes in Python \\
+            \item  mystring = r'Hello"Python"'
+            (You can also include quotes within a string)
+            \item mystring = 'Hi How are you?'\\
+             mystring[0]  (will extract the first charecter in the string)
+			 mystring[-1]  (will extract the last charecter in the string)
+			 mystring.split(' ')[0] (will extrat the first word from the string)
+			\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}
+      \frametitle{Lists}
+			\begin{itemize}
+			\item Lists are defined within the square brackets [] \\
+			\item  k = [124, 225, 305, 246, 259] \\
+                  k[0] (Expected Output: 124)\\
+                  k[1] (Expected Output: 225)\\
+                  k[-1] (Expected Output: 259) \\
+                 k[:3] (returns [124, 225, 305]) \\
+		 \end{itemize}
+			
+
+\end{frame} 
+
+\begin{frame}
+      \frametitle{Lists}
+      Operations with lists
+			\begin{itemize}
+			\item Add a fixed Quantity to every element in the list \\
+			for i in range(len(x)):\\
+                   x[i] += 5 \\
+                   print(x) \\
+			\item Combine or join two lists\\
+                  X = [1, 2, 3] \\
+                   Y = [4, 5, 6] \\
+Z = X + Y \\
+print(Z) (Expected output is [1, 2, 3, 4, 5, 6]) \\ 
+		 \end{itemize}
+			
+
+\end{frame}
+
+\begin{frame}
+      \frametitle{Lists}
+      Operations with lists
+			\begin{itemize}
+			\item Sum of values in the two lists \\
+			 X = [1, 2, 3] \\
+             Y = [4, 5, 6] \\
+import numpy as np (Numpy is a package in Python)\\
+Z = np.add(X, Y) \\
+print(Z) (Expected outcome: [5,7,9])
+			\item Repeat Lists N Times\\
+             X = [1, 2, 3] \\
+Z = X * 3 \\
+print(Z) (Expected output is:[1, 2, 3, 1, 2, 3, 1, 2, 3])
+		 \end{itemize}
+			
+
+\end{frame}
+
+
+\begin{frame}
+      \frametitle{Lists}
+      Operations with lists
+			\begin{itemize}
+			\item Modify\ Replace an item from the list \\
+			 X = [1, 2, 3] \\
+             X[2]=5 \\
+             print(X) (Expected Outcome: [1,2,5])
+			
+			\item Add\ Remove an item from the list\\
+              X = ['AA', 'BB', 'CC'] \\
+X.append('DD')\\
+print(X) (Expected Output: ['AA', 'BB', 'CC', 'DD']) \\
+ X = ['AA', 'BB', 'CC'] \\
+X.remove('BB') \\
+print(X) (Expected Output: ['AA', 'BB'])\\
+		 \end{itemize}
+			
+
+\end{frame}
+
+
+\begin{frame}
+      \frametitle{Lists}
+      Operations with lists
+			\begin{itemize}
+			\item Sort a List \\
+			      k = [124, 225, 305, 246, 259]\\
+    k.sort() \\
+    print(k) (Expected Output : [124, 225, 246, 259, 305])
+
+
+			
+		 \end{itemize}
+			
+
+\end{frame}
+
+
+
+
+\begin{frame}
+      \frametitle{Tuples}
+      Like list, tuple can also contain mixed data. But tuple cannot be changed or altered once created whereas list can be modified. Another difference is a tuple is created inside parentheses ( ). Whereas, list is created inside square brackets [ ]
+	\begin{itemize}
+			\item Initializing a Tuple \\
+			 mytuple = (123,223,323) \\
+            City = ('Delhi','Mumbai','Bangalore') \\
+			\item Performig a loop on a Tuple\\
+			 for i in City: \\
+              print(i) \\
+			(
+			Expected Outcome :Delhi \\
+			Mumbai \\
+			Banglore \\
+			)
+		 \end{itemize}
+			
+
+\end{frame}
+
+\begin{frame}
+      \frametitle{Tuples}
+      
+	\begin{itemize}
+			\item Tuples cannot be altered \\
+			 X = (1, 2, 3) \\
+             X[2]=5 \\
+            ( TypeError: 'tuple' object does not support item assignment)             
+             
+			\end{itemize}
+			
+
+\end{frame}
+
+\begin{frame}
+      \frametitle{Dictionary}
+      It works like an address book wherein you can find an address of a person by searching the name. In this example. name of a person is considered as key and address as value. It is important to note that the key must be unique while values may not be. Keys should not be duplicate because if it is a duplicate, you cannot find exact values associated with key. Keys can be of any data type such as strings, numbers, or tuples.
+\begin{itemize}
+			\item Create a dictionary \\
+			     teams = $\lbrace$ 'Dave' : 'team A',\\
+             'Tim' : 'team B',\\
+             'Babita' : 'team C',\\
+             'Sam' : 'team B',\\
+             'Ravi' : 'team C' \\
+            $\rbrace$
+            \end{itemize}
+			
+
+\end{frame}
+
+\begin{frame}
+Operations with Dictionaries
+\begin{itemize}
+			\item Find Values \\
+			     teams['Sam'] \\
+			     (Expected Output : 'team B')
+			 \item Delete an item \\
+			      del teams['Ravi'] \\
+			  \item Add an item \\
+			       teams['Deep'] = 'team B'\\
+			       (Expected output :
+			       teams = $\lbrace$ 'Dave' : 'team A',\\
+             'Tim' : 'team B',\\
+             'Babita' : 'team C',\\
+             'Sam' : 'team B',\\
+             'Deep': 'team B'. \\
+             'Ravi' : 'team C' \\
+            $\rbrace$
+			       )
+            \end{itemize}
+			
+
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}
+ \frametitle{Sets}
+      Sets are unordered collections of simple objects.
+                        \begin{itemize}
+                        \item How to define a set \\
+                        X = set(['A', 'B', 'C']) \\
+                        \item Does 'A' exist in X? \\
+                        'A'in X \\
+                        (Expected Output: True ) \\
+                        \item Does 'A' exist in X? \\
+                        'A'in X \\
+                        (Expected Output: False ) \\
+                        \item How to add 'D' in set X \\
+                        X.add(D) \\
+                        \item How to remove 'C' from set X?
+                        X.remove(C) \\
+                        \item How to create a copy of set X?
+            Y=X.copy() \\
+            \item Which items are common in both sets X and Y? Y \& X
+     \end{itemize}
+ \end{frame}
+			
+			
+			
+\frame{
+\begin{center}
+\Huge Thank You !!!
+\end{center}  
+ }
+      
+\end{document}
